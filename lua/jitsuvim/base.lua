@@ -1,6 +1,5 @@
--- [[ Основные настройки для Neovim ]]
 -- Jitsuvim - 2023
-
+vim.opt.swapfile = false
 vim.opt.shell = 'fish'
 vim.opt.relativenumber = true
 vim.opt.ignorecase = true
