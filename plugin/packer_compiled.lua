@@ -74,6 +74,12 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["ChatGPT.nvim"] = {
+    config = { "\27LJ\2\n£\b\0\0\6\0 \0'6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0006\3\4\0=\3\5\0025\3\6\0005\4\a\0=\4\b\3=\3\t\0025\3\r\0005\4\n\0005\5\v\0=\5\f\4=\4\14\3=\3\15\0025\3\16\0005\4\17\0005\5\18\0=\5\f\4=\4\14\3=\3\19\0025\3\20\0005\4\21\0005\5\22\0=\5\f\4=\4\14\3=\3\23\0025\3\24\0=\3\25\0025\3\26\0=\3\27\0025\3\29\0005\4\28\0=\4\30\3=\3\31\2B\0\2\1K\0\1\0\fkeymaps\nclose\1\0\v\19select_session\f<Space>\16scroll_down\n<C-d>\19rename_session\6r\14scroll_up\n<C-u>\19delete_session\6d\19yank_last_code\n<C-k>\14yank_last\n<C-y>\vsubmit\14<C-Enter>\18cycle_windows\n<Tab>\16new_session\n<C-n>\20toggle_settings\n<C-o>\1\2\0\0\n<C-c>\23openai_edit_params\1\0\4\nmodel\26code-davinci-edit-001\6n\3\1\ntop_p\3\1\16temperature\3\0\18openai_params\1\0\a\15max_tokens\3¬\2\21presence_penalty\3\0\22frequency_penalty\3\0\6n\3\1\nmodel\18gpt-3.5-turbo\ntop_p\3\1\16temperature\3\0\15chat_input\1\0\2\14top_align\vcenter\btop\r Prompt \1\0\2\14highlight\16FloatBorder\nstyle\frounded\1\0\1\vprompt\n ï†’ \16chat_window\1\0\1\btop\14 ChatGPT \1\0\2\14highlight\16FloatBorder\nstyle\frounded\1\0\1\rfiletype\fchatgpt\20settings_window\vborder\1\0\0\ttext\1\0\1\btop\15 Settings \1\0\1\nstyle\frounded\16chat_layout\tsize\1\0\2\vheight\b80%\nwidth\b80%\1\0\2\rrelative\veditor\rposition\b50%\20welcome_message\20WELCOME_MESSAGE\1\0\5\18yank_register\6+\20max_line_length\3x\16answer_sign\bï®§\18question_sign\bï€‡\17loading_text\floading\nsetup\fchatgpt\frequire\0" },
+    loaded = true,
+    path = "/home/artix/.local/share/nvim/site/pack/packer/start/ChatGPT.nvim",
+    url = "https://github.com/jackMort/ChatGPT.nvim"
+  },
   ["Comment.nvim"] = {
     loaded = true,
     path = "/home/artix/.local/share/nvim/site/pack/packer/start/Comment.nvim",
@@ -113,6 +119,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/artix/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  fd = {
+    loaded = true,
+    path = "/home/artix/.local/share/nvim/site/pack/packer/start/fd",
+    url = "https://github.com/sharkdp/fd"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -228,6 +239,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for which-key.nvim]], true)
 try_loadstring("\27LJ\2\nF\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\29jitsuvim.config.whichkey\frequire\0", "config", "which-key.nvim")
 time([[Config for which-key.nvim]], false)
+-- Config for: ChatGPT.nvim
+time([[Config for ChatGPT.nvim]], true)
+try_loadstring("\27LJ\2\n£\b\0\0\6\0 \0'6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0006\3\4\0=\3\5\0025\3\6\0005\4\a\0=\4\b\3=\3\t\0025\3\r\0005\4\n\0005\5\v\0=\5\f\4=\4\14\3=\3\15\0025\3\16\0005\4\17\0005\5\18\0=\5\f\4=\4\14\3=\3\19\0025\3\20\0005\4\21\0005\5\22\0=\5\f\4=\4\14\3=\3\23\0025\3\24\0=\3\25\0025\3\26\0=\3\27\0025\3\29\0005\4\28\0=\4\30\3=\3\31\2B\0\2\1K\0\1\0\fkeymaps\nclose\1\0\v\19select_session\f<Space>\16scroll_down\n<C-d>\19rename_session\6r\14scroll_up\n<C-u>\19delete_session\6d\19yank_last_code\n<C-k>\14yank_last\n<C-y>\vsubmit\14<C-Enter>\18cycle_windows\n<Tab>\16new_session\n<C-n>\20toggle_settings\n<C-o>\1\2\0\0\n<C-c>\23openai_edit_params\1\0\4\nmodel\26code-davinci-edit-001\6n\3\1\ntop_p\3\1\16temperature\3\0\18openai_params\1\0\a\15max_tokens\3¬\2\21presence_penalty\3\0\22frequency_penalty\3\0\6n\3\1\nmodel\18gpt-3.5-turbo\ntop_p\3\1\16temperature\3\0\15chat_input\1\0\2\14top_align\vcenter\btop\r Prompt \1\0\2\14highlight\16FloatBorder\nstyle\frounded\1\0\1\vprompt\n ï†’ \16chat_window\1\0\1\btop\14 ChatGPT \1\0\2\14highlight\16FloatBorder\nstyle\frounded\1\0\1\rfiletype\fchatgpt\20settings_window\vborder\1\0\0\ttext\1\0\1\btop\15 Settings \1\0\1\nstyle\frounded\16chat_layout\tsize\1\0\2\vheight\b80%\nwidth\b80%\1\0\2\rrelative\veditor\rposition\b50%\20welcome_message\20WELCOME_MESSAGE\1\0\5\18yank_register\6+\20max_line_length\3x\16answer_sign\bï®§\18question_sign\bï€‡\17loading_text\floading\nsetup\fchatgpt\frequire\0", "config", "ChatGPT.nvim")
+time([[Config for ChatGPT.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
