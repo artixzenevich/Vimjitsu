@@ -1,5 +1,5 @@
-require("chatgpt").setup({
-  welcome_message = "Hello world",
+local M = {
+  welcome_message = "Hello world Artix",
   loading_text = "loading",
   question_sign = "", -- you can use emoji if you want e.g. 🙂
   answer_sign = "ﮧ", -- 🤖
@@ -72,4 +72,9 @@ require("chatgpt").setup({
     rename_session = "r",
     delete_session = "d",
   },
-})
+}
+
+return M
+
+
+

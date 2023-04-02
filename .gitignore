@@ -1,0 +1,6 @@
+pack/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
