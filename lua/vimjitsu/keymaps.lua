@@ -14,4 +14,6 @@ keymap.set('i', 'jk', '<escape>')
 keymap.set("n", "<C-v>", "<C-w>v") -- split window vertically
 keymap.set("n", "<C-h>", "<C-w>s") -- split window horizontally
 
-
+-- Buffer moving
+keymap.set("n", "<S-l>", ":bnext<CR>")
+keymap.set("n", "<S-h>", ":bprevious<CR>")
