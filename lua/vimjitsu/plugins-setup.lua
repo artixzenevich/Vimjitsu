@@ -15,6 +15,14 @@ return require('packer').startup(function(use)
   	  	'nvim-tree/nvim-web-devicons',
 		}
 	}
+
+	use {
+		"andrewferrier/wrapping.nvim",
+    config = function()
+    	require("wrapping").setup()
+    end,
+	}
+
 	use { 'akinsho/nvim-bufferline.lua',  tag = "v3.*"}
 
 	use { "catppuccin/nvim", as = "catppuccin" }
@@ -64,6 +72,11 @@ return require('packer').startup(function(use)
 			{'nvim-treesitter/nvim-treesitter'}
 		}
 	}
+
+	use {
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  }
 
 	use { 'numToStr/Comment.nvim',
     requires = {
