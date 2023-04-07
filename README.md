@@ -19,7 +19,7 @@ mv ~/.local/share/nvim ~/.local/share/nvim.bak
 Clone the repository
 ```
 git clone --depth 1 git@github.com:artixzenevich/Vimjitsu.git ~/.config/nvim
-nvim 
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 ```
 
 ## Basic Install
