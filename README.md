@@ -18,8 +18,8 @@ mv ~/.local/share/nvim ~/.local/share/nvim.bak
 ```
 Clone the repository
 ```
-git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-nvim
+git clone --depth 1 git@github.com:artixzenevich/Vimjitsu.git ~/.config/nvim
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 ```
 
 ## Basic Install

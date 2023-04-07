@@ -110,5 +110,8 @@ return require('packer').startup(function(use)
 			require"startup".setup({theme = "vimjitsu"})
 		end
 	}
-
+	
+	if packer_bootstrap then
+    require('packer').sync()
+  end
 end)
