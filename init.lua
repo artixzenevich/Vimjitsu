@@ -1,6 +1,4 @@
---VimJitsu-PDE 
-
-require('vimjitsu.base')
+require('vimjitsu.options')
 require('vimjitsu.keymaps')
 
 local ensure_packer = function()
@@ -16,14 +14,7 @@ end
 
 local packer_bootstrap = ensure_packer()
 
+require('vimjitsu.plugins')
 
-require('vimjitsu.plugins-setup') 
-require('vimjitsu.plugins.lsp-zero')
-require('vimjitsu.plugins.nvim-tree')
-require('vimjitsu.plugins.bufferline')
-
---[[ Choosing a color scheme ]]--
--- Install the new color scheme in the plugins-setup.lua file
-vim.cmd.colorscheme  'catppuccin-mocha'
-
+vim.cmd.colorscheme "catppuccin-mocha"
 
