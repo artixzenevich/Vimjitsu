@@ -1,3 +1,5 @@
+vim.notify = require("notify")
+
 local opt = vim.opt
 
 opt.autowrite = true -- Enable auto write
