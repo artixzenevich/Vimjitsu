@@ -37,6 +37,13 @@ return require('packer').startup(function(use)
   }
 
   use {
+    'hrsh7th/nvim-cmp',
+    config = function()
+      require('vimjitsu.configs.cmp').setup()
+    end
+  }
+
+  use {
     'nvim-treesitter/nvim-treesitter',
     config = function()
       require('vimjitsu.configs.treesitter').setup()
@@ -44,7 +51,7 @@ return require('packer').startup(function(use)
   }
 
   use {
-	  "windwp/nvim-autopairs",
+    "windwp/nvim-autopairs",
     config = function()
       require("nvim-autopairs").setup {}
     end
@@ -72,6 +79,14 @@ return require('packer').startup(function(use)
       require("galaxyline.themes.eviline")
     end,
     requires = { "kyazdani42/nvim-web-devicons", opt = true }
+  }
+
+  use {
+    "startup-nvim/startup.nvim",
+    requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+    config = function()
+      require"startup".setup()
+    end
   }
 
   if packer_bootstrap then

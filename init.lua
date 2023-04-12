@@ -17,3 +17,4 @@ local packer_bootstrap = ensure_packer()
 require('vimjitsu.plugins')
 
 vim.cmd.colorscheme "catppuccin-mocha"
+

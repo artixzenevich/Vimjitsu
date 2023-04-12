@@ -11,4 +11,9 @@ keymap.set('n', '<leader>c', ':BufferClose<CR>')
 
 keymap.set('n', 'ff', ':Telescope find_files<CR>')
 keymap.set('n', 'fg', ':Telescope live_grep<CR>')
+
 keymap.set('n', '<leader>z', ':ZenMode<CR>')
+
+keymap.set('n', '<leader>g', ':LazyGit<CR>')
+
+keymap.set('n', '<leader>a', ':AerialToggle<CR>')
