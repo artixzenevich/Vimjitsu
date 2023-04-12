@@ -4,6 +4,8 @@ return require('packer').startup(function(use)
   use 'nvim-lua/plenary.nvim'
   use 'rcarriga/nvim-notify'
   use 'folke/neodev.nvim'
+  use 'folke/zen-mode.nvim'
+  use 'kdheepak/lazygit.nvim'
 
   use {
     'stevearc/aerial.nvim',
