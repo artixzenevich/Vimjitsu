@@ -74,11 +74,15 @@ return require('packer').startup(function(use)
   use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 
   use {
-    "NTBBloodbath/galaxyline.nvim",
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-web-devicons', opt = true },
     config = function()
-      require("galaxyline.themes.eviline")
-    end,
-    requires = { "kyazdani42/nvim-web-devicons", opt = true }
+      require('lualine').setup {
+        options = {
+          theme = 'palenight'
+        }
+      }
+    end
   }
 
   use {
