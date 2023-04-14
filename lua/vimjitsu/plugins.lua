@@ -6,6 +6,7 @@ return require('packer').startup(function(use)
   use 'folke/neodev.nvim'
   use 'folke/zen-mode.nvim'
   use 'kdheepak/lazygit.nvim'
+  use 'RRethy/vim-illuminate'
 
   use {
     'stevearc/aerial.nvim',
@@ -92,6 +93,22 @@ return require('packer').startup(function(use)
       require"startup".setup()
     end
   }
+
+  use({
+  "jackMort/ChatGPT.nvim",
+    config = function()
+      require("chatgpt").setup({
+        keymaps = {
+          new_session = '<leader>G'
+        }
+      })
+    end,
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "plenary.nvim",
+      "telescope.nvim"
+    }
+  })
 
   if packer_bootstrap then
     require('packer').sync()

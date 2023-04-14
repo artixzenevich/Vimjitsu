@@ -17,3 +17,16 @@ keymap.set('n', '<leader>z', ':ZenMode<CR>')
 keymap.set('n', '<leader>g', ':LazyGit<CR>')
 
 keymap.set('n', '<leader>a', ':AerialToggle<CR>')
+
+keymap.set('n', 'ss', ':split<Return><C-w>w')
+keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
+keymap.set('n', 'sh', '<C-w>h')
+keymap.set('n', 'sk', '<C-w>k')
+keymap.set('n', 'sj', '<C-w>j')
+keymap.set('n', 'sl', '<C-w>l')
+keymap.set('n', '<left>', '<C-w><')
+keymap.set('n', '<right>', '<C-w>>')
+keymap.set('n', '<up>', '<C-w>+')
+keymap.set('n', '<down>', '<C-w>-')
+
+keymap.set('n', 'ai', ':ChatGPT<CR>')
