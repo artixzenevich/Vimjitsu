@@ -30,3 +30,5 @@ keymap.set('n', '<up>', '<C-w>+')
 keymap.set('n', '<down>', '<C-w>-')
 
 keymap.set('n', 'ai', ':ChatGPT<CR>')
+
+keymap.set('n', 'cc', ':IlluminateToggle<CR>')
