@@ -2,6 +2,7 @@ vim.notify = require("notify")
 
 local opt = vim.opt
 
+opt.swapfile = false
 opt.autowrite = true -- Enable auto write
 opt.clipboard = "unnamedplus" -- Sync with system clipboard
 opt.cursorline = true -- Enable highlighting of the current line

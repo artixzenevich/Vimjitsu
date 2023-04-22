@@ -17,3 +17,9 @@ local packer_bootstrap = ensure_packer()
 require('vimjitsu.plugins')
 
 vim.cmd.colorscheme "catppuccin-mocha"
+
+-- TODO; Add a configuration for the deno
+vim.g.markdown_fenced_languages = {
+  "ts=typescript",
+  "js=javascript"
+}

@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
   use 'folke/zen-mode.nvim'
   use 'kdheepak/lazygit.nvim'
   use 'RRethy/vim-illuminate'
+  use "MunifTanjim/nui.nvim"
 
   use {
     'stevearc/aerial.nvim',
@@ -104,7 +105,7 @@ return require('packer').startup(function(use)
       })
     end,
     requires = {
-      "MunifTanjim/nui.nvim",
+      "nui.nvim",
       "plenary.nvim",
       "telescope.nvim"
     }
