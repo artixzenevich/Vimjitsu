@@ -95,22 +95,6 @@ return require('packer').startup(function(use)
     end
   }
 
-  use({
-  "jackMort/ChatGPT.nvim",
-    config = function()
-      require("chatgpt").setup({
-        keymaps = {
-          new_session = '<leader>G'
-        }
-      })
-    end,
-    requires = {
-      "nui.nvim",
-      "plenary.nvim",
-      "telescope.nvim"
-    }
-  })
-
   if packer_bootstrap then
     require('packer').sync()
   end
