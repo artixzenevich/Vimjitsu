@@ -1,5 +1,6 @@
 # Vimjitsu
 
+
 This is my basic neovim config designed for web development.
 
 ## Requirements
