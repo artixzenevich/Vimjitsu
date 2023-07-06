@@ -1,5 +1,3 @@
-vim.notify = require("notify")
-
 local opt = vim.opt
 
 opt.swapfile = false
