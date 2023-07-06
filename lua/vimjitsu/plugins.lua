@@ -1,5 +1,6 @@
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
+  use 'ryanoasis/vim-devicons'
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lua/plenary.nvim'
   use 'rcarriga/nvim-notify'
@@ -8,6 +9,23 @@ return require('packer').startup(function(use)
   use 'kdheepak/lazygit.nvim'
   use 'RRethy/vim-illuminate'
   use "MunifTanjim/nui.nvim"
+
+  use {
+    'xiyaowong/transparent.nvim',
+    config = function() require("transparent").setup({
+      groups = { -- table: default groups
+        'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier',
+        'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function',
+        'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText',
+        'SignColumn', 'CursorLineNr', 'EndOfBuffer',
+      },
+      extra_groups = {
+        'Normal'
+      }, -- table: additional groups that should be cleared
+      exclude_groups = {}, -- table: groups you don't want to clear
+    })
+    end
+  }
 
   use {
     'stevearc/aerial.nvim',
