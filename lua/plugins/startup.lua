@@ -73,4 +73,3 @@ local settings = {
     parts = { "header", "body", "footer" },
 }
 return settings
-

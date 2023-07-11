@@ -5,6 +5,8 @@ keymap.set('i', 'jk', '<escape>')
 keymap.set('n', '<leader>w', ':w<CR>')
 keymap.set('n', '<leader>q', ':q<CR>')
 
+keymap.set('n', 'sf', ':Neotree<CR>')
+
 keymap.set('n', '<A-d>', ':BufferNext<CR>')
 keymap.set('n', '<A-a>', ':BufferPrevious<CR>')
 keymap.set('n', '<leader>c', ':BufferClose<CR>')

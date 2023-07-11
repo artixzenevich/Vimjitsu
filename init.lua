@@ -1,25 +1,12 @@
-require('vimjitsu.options')
-require('vimjitsu.keymaps')
+-- Basic
+require('core.options')
+require('core.keymaps')
+require('core.plugins')
 
-local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
-end
-
-local packer_bootstrap = ensure_packer()
-
-require('vimjitsu.plugins')
+-- Plugins
+require('plugins.startup')
+require('plugins.telescope')
+require('plugins.lsp')
+require('plugins.cmp')
 
 vim.cmd.colorscheme "catppuccin-mocha"
-
--- TODO; Add a configuration for the deno
-vim.g.markdown_fenced_languages = {
-  "ts=typescript",
-  "js=javascript"
-}
