@@ -17,7 +17,8 @@ require('nvim-treesitter.configs').setup{
     "css",
     "html",
     "lua",
-    "vim"
+    "vim".
+    "astro"
   },
   autotag = {
     enable = true,

@@ -1,10 +1,22 @@
 -- Setup language servers.
 local lspconfig = require('lspconfig')
+
 lspconfig.html.setup {}
+
+lspconfig.tsserver.setup{}
+
+lspconfig.cssls.setup {
+  capabilities = capabilities,
+}
+
+lspconfig.astro.setup{}
+
 lspconfig.emmet_ls.setup ({
   on_attach = on_attach,
-  filetypes = { "css", "html", "javascriptreact", "typescriptreact", "php" },
+  filetypes = { "css", "html", "javascriptreact", "typescriptreact", "php", "astro" },
 })
+
+
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
