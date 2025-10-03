@@ -25,70 +25,72 @@ vim.pack.add({
     { src = "https://github.com/nvim-lua/plenary.nvim" },
     { src = "https://github.com/stevearc/oil.nvim" },
     { src = "https://github.com/rcarriga/nvim-notify" },
+    { src = "https://github.com/nvim-lualine/lualine.nvim" },
+    { src = "https://github.com/sphamba/smear-cursor.nvim" },
 })
 
--- Работа с плагинами и настройка
 require "telescope".setup()
 require "mini.icons".setup()
 require "mini.pairs".setup()
 require "mini.tabline".setup()
-
+require "smear_cursor".setup()
 require "mini.comment".setup({
     mappings = {
-  comment_line = '<leader>/',
+	comment_line = '<leader>/',
     },
 })
 
--- Подключение плагина nvim-notify
+-- Конфигурация оповещений
 local notify = require("notify")
--- Замена стандартного vim.notify
 vim.notify = notify
 
 notify.setup({
-  stages = "fade_in_slide_out", 
-  timeout = 3000,
-  background_colour = "Normal",
-  icons = {
-    ERROR = "",
-    WARN = "",
-    INFO = "",
-    DEBUG = "",
-    TRACE = "✎",
-  },
+    stages = "fade_in_slide_out", 
+    timeout = 3000,
+    background_colour = "Normal",
+    icons = {
+	ERROR = "",
+	WARN = "",
+	INFO = "",
+	DEBUG = "",
+	TRACE = "✎",
+    },
 })
 
-local detail = false
+-- Проводник
 require("oil").setup({
     float = {
-  padding = 0,
-  max_width = 0.5,
-  max_height = 0.5,
-  border = "rounded",
+      padding = 0,
+      max_width = 0.5,
+      max_height = 0.5,
+      border = "rounded",
     }
 })
 
+require "lualine".setup()
+
 -- Бинды
 map("i","jk", "<escape>")
-
 -- Сохранение
 map("n","<leader>w", function()
     local filename = vim.fn.expand("%:t")
     vim.cmd("write")
-    notify("Файл '" ..filename.. "' сохранен", "info", { title="Сохранение"})
-end)
 
+    if vim.bo.filetype ~= "oil" then
+	notify("Файл '" ..filename.. "' сохранен", "info", { title="Сохранение"})
+    end
+end)
 -- Выход
 map("n","<leader>q", function()
     if vim.bo.modified then
-  vim.notify("Есть несохраненные изменения!", "warn", {
+	  vim.notify("Есть несохраненные изменения!", "warn", {
             title = "Выход",
             timeout = 3000
         })
     else
-  vim.cmd("quit")
+      vim.cmd("quit")
     end
 end)
-
 -- Перезагрузка конфига
 map("n", "<leader>s", function()
     local success, result = pcall(vim.cmd, "so")
@@ -106,16 +108,16 @@ map("n", "<leader>s", function()
 end)
 
 -- Буфер
-map("n","<leader>a", ":bprev<CR>")
-map("n","<leader>d", ":bnext<CR>")
+map("n","<A-a>", ":bprev<CR>")
+map("n","<A-d>", ":bnext<CR>")
 map("n","<leader>c", function()
      if vim.bo.modified then
-  vim.notify("Есть несохраненные изменения!", "warn", {
+	  vim.notify("Есть несохраненные изменения!", "warn", {
             title = "Закрыть буффер",
             timeout = 3000
         })
     else
-  vim.cmd("bd")
+      vim.cmd("bd")
     end   
 end)
 
