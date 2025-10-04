@@ -1,5 +1,2 @@
-# My personal config for Neovim
+# VimJitsu
 
-## TODO
-- разделение экрана
-- работа с гит
