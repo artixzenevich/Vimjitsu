@@ -25,5 +25,6 @@ require("blink.cmp").setup({
 
 	    ['<C-k>'] = { 'show_signature', 'hide_signature', 'fallback' },
 	},
+	fuzzy = { implementation = "lua"  }
 })
 

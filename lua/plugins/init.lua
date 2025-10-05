@@ -22,6 +22,7 @@ vim.pack.add({
     { src = "https://github.com/Saghen/blink.cmp" },
     { src = "https://github.com/L3MON4D3/LuaSnip" },
     { src = "https://github.com/rafamadriz/friendly-snippets" },
+    { src = "https://github.com/max397574/startup.nvim" },
 })
 
 -- Подключение конфигурации плагинов
@@ -38,6 +39,7 @@ require "mini.pairs".setup()
 require "mini.tabline".setup()
 require "mini.cursorword".setup()
 require "smear_cursor".setup()
+require("startup").setup({theme = "vimjitsu"})
 
 -- Общие настройки для LSP
 require "mason".setup()
