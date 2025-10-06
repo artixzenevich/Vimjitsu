@@ -23,6 +23,8 @@ vim.pack.add({
     { src = "https://github.com/L3MON4D3/LuaSnip" },
     { src = "https://github.com/rafamadriz/friendly-snippets" },
     { src = "https://github.com/max397574/startup.nvim" },
+    { src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" },
+    { src = "https://github.com/echaya/neowiki.nvim" },
 })
 
 -- Подключение конфигурации плагинов
@@ -30,6 +32,7 @@ require("plugins.oil")
 require("plugins.telescope")
 require("plugins.lualine")
 require("plugins.noice")
+require("plugins.wiki")
 
 -- Если плагин не нуждаеться в конфигурировании, или требуют небольшой конфигурации, 
 -- то просто подключаем его здесть: прим. reuiqre "plug".setup()
@@ -40,6 +43,9 @@ require "mini.tabline".setup()
 require "mini.cursorword".setup()
 require "smear_cursor".setup()
 require("startup").setup({theme = "vimjitsu"})
+require('render-markdown').setup({
+    file_types = { 'markdown' },
+})
 
 -- Общие настройки для LSP
 require "mason".setup()
@@ -49,16 +55,23 @@ require "mason-tool-installer".setup({
 	"lua_ls",
 	"stylua",
 	"pyright",
-	"emmet_ls"
+	"emmet-language-server"
     }
 })
 
 -- Инициализация сниппетов
 require("luasnip.loaders.from_vscode").lazy_load()
 
+-- https://neovim.io/doc/user/lsp.html
+vim.lsp.config["emmet_language_server"] = {
+    filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "pug", "typescriptreact", "php", "astro" },
+}
+
 vim.lsp.enable({
     "lua_ls",
-    "pyright"
+    "pyright",
+    "emmet_language_server",
+    "markdown_oxide"
 })
 
 require("plugins.cmp")
