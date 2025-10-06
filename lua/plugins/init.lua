@@ -62,9 +62,10 @@ require "mason-tool-installer".setup({
 -- Инициализация сниппетов
 require("luasnip.loaders.from_vscode").lazy_load()
 
+-- TODO ВЫНЕСТИ ПОТОМ В ОТДЕЛЬНЫЙ ФАЙЛ
 -- https://neovim.io/doc/user/lsp.html
 vim.lsp.config["emmet_language_server"] = {
-    filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "pug", "typescriptreact", "php", "astro" },
+    filetypes = { "css", "html", "javascript", "javascriptreact", "sass", "scss", "typescriptreact", "php", "astro" },
 }
 
 vim.lsp.enable({
