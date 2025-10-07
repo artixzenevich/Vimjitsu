@@ -54,6 +54,7 @@ require "mason-tool-installer".setup({
     ensure_installed = {
 	"lua_ls",
 	"stylua",
+	"gopls",
 	"pyright",
 	"emmet-language-server"
     }
@@ -71,6 +72,7 @@ vim.lsp.config["emmet_language_server"] = {
 vim.lsp.enable({
     "lua_ls",
     "pyright",
+    "gopls",
     "emmet_language_server",
     "markdown_oxide"
 })
