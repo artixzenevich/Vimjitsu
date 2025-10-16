@@ -6,13 +6,13 @@
  ░██  ░██  ░██░██   ░██   ░██ ░██   ░██  ░██   ░██     ░███████  ░██    ░██
   ░██░██   ░██░██   ░██   ░██ ░██   ░██  ░██   ░██           ░██ ░██   ░███
    ░███    ░██░██   ░██   ░██  ░██████   ░██    ░████  ░███████   ░█████░██
---]]
+]]
 
-require("core.options")
-require("core.keymaps")
-require("plugins.init")
-
-vim.cmd("colorscheme gruvbox")
+require("config.options")
+require("core.lazy")
+require("core.lsp")
+require("config.keymaps")
+require("config.autocmds")
 
 -- Отключение '~' в колонке с нумерацией строк
 vim.cmd [[
