@@ -26,25 +26,32 @@ map("n", "<space>ff", ":Telescope find_files<CR>", { silent = true })
 map("n", "<space>fg", ":Telescope live_grep<CR>", { silent = true })
 map("n", "<space>fb", ":Telescope buffers<CR>", { silent = true })
 
--- Перезагрузка конфига
-map("n", "<leader>r", function()
-    local success, result = pcall(vim.cmd, "so")
-    if success then
-	vim.notify("Конфигурация успешно перезагружена", "info", {
-	    title = "Neovim Config",
-	})
-    else
-	vim.notify("Ошибка при перезагрузке: " .. tostring(result), "error", {
-	    title = "Ошибка конфигурации",
-	    timeout = 5000
-	})
-    end
-end)
 
--- Открывает Oil сразу в режиме предпросмотра
-map("n","<space>e", function ()
-    require("oil").toggle_float()
-    vim.defer_fn(function()
-	require("oil").open_preview()
-    end, 100) -- оптимальное время задержки
-end)
+local oil = require("oil")
+
+-- Создаем toggle функцию
+local function toggle_oil()
+    local oil_open = false
+    for _, win in ipairs(vim.api.nvim_list_wins()) do
+        local buf = vim.api.nvim_win_get_buf(win)
+        if vim.bo[buf].filetype == "oil" then
+            oil_open = true
+            break
+        end
+    end
+
+    if oil_open then
+        -- Закрыть все Oil окна
+        vim.cmd("bd")
+    else
+        -- Открыть Oil
+        oil.open()
+    end
+end
+
+-- Настройка маппинга
+vim.keymap.set("n", "<space>e", toggle_oil, { desc = "Toggle Oil" })
+
+
+
+
