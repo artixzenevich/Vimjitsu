@@ -1,4 +1,5 @@
 return {
+    {
 	"stevearc/conform.nvim",
 	opts = {},
 	config = function()
@@ -12,5 +13,11 @@ return {
 			--     async = false,
 			-- },
 		})
-	end,
+	end
+    },
+
+    {
+        "mason-org/mason.nvim",
+        opts = {}
+    },
 }
