@@ -25,3 +25,5 @@ map("n", "<leader>;", ":")
 map("n", "<space>ff", ":Telescope find_files<CR>", { silent = true })
 map("n", "<space>fg", ":Telescope live_grep<CR>", { silent = true })
 map("n", "<space>fb", ":Telescope buffers<CR>", { silent = true })
+
+map("n", "<space>g", "<cmd>LazyGit<cr>", { silent = true})

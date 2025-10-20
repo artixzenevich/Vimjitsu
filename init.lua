@@ -17,3 +17,4 @@ require("config.autocmds")
 require("utils.oil_toggle")
 
 vim.cmd.colorscheme("gruvbox")
+
