@@ -1,5 +1,6 @@
 vim.lsp.enable({
-    "lua_ls"
+    "lua_ls",
+    "emmet-language-server"
 })
 
 vim.diagnostic.config({
