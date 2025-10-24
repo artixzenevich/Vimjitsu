@@ -12,6 +12,6 @@ return {
         "scss",
         "typescriptreact",
         "astro",
-        "php",
+        "blade",
     },
 }
