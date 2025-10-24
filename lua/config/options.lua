@@ -18,9 +18,9 @@ vim.opt.clipboard = "unnamedplus"
 -- Невидимые символы
 vim.opt.list = true
 vim.opt.listchars = {
-  tab = "▸ ",
-  trail = "·",
-  nbsp = "␣",
+    tab = "▸ ",
+    trail = "·",
+    nbsp = "␣",
 }
 
 vim.opt.mouse = "a"

@@ -1,7 +1,7 @@
 return {
     cmd = {
         "emmet-language-server",
-        "--stdio"
+        "--stdio",
     },
     filetypes = {
         "css",
@@ -12,6 +12,6 @@ return {
         "scss",
         "typescriptreact",
         "astro",
-        "php"
+        "php",
     },
 }

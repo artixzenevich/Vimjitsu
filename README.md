@@ -1,10 +1,6 @@
 # VimJitsu
 
-Долгое время я пытался создать удобную рабочую среду, с которой мог бы комфортно работать. Готовые решения оказывались либо неудобными, либо слишком громоздкими, либо (что более вероятно) мне было лень разбираться и тратить на это время.
-
-Этот проект представляет собой простую компиляцию идей, которые были либо подсмотрены на YouTube, либо пришли мне в голову во время ночных размышлений. Я старался сделать всё максимально минималистичным. Пока сложно сказать, что из этого получится.
-
-Конфигурация ориентирована на типичную full-stack разработку. Меня также вдохновил Emacs с его подходом, и в настоящее время я планирую использовать **Neovim** как систему для ведения заметок, а в дальнейшем перевести половину своего workflow в эту среду.
+Основано на [lazyvim](https://www.lazyvim.org/)
 
 ## Зависимости
 
@@ -16,7 +12,6 @@
 - [kitty](https://sw.kovidgoyal.net/kitty/) - терминальный эмулятор
 
 ## Установка
-
 
 ```bash
 git clone https://github.com/artixzenevich/Vimjitsu
@@ -35,46 +30,6 @@ rm -rf ~/.local/share/nvim
 rm -rf ~/.local/state/nvim
 rm -rf ~/.cache/nvim
 ```
-
-## Архитектура
-
-### Базовые компоненты
-
-- [mini.nvim](https://github.com/nvim-mini/mini.nvim) - набор минималистичных модулей
- - mini.pairs - автоматическое закрытие скобок и кавычек
- - mini.tabline - панель с открытыми файлами
- - mini.cursorword - подсветка одинаковых слов под курсором
-
-### Разработка
-
-- [LuaSnip](https://github.com/L3MON4D3/LuaSnip) - движок сниппетов
-- [blink.cmp](https://github.com/Saghen/blink.cmp) - система автодополнения
-- [lazydev](https://github.com/folke/lazydev.nvim) - инструменты для разработки конфигураций Neovim
-- [lazygit](https://github.com/kdheepak/lazygit.nvim) - интеграция с Lazygit
-
-### Внешний вид
-
-- [gruvbox](https://github.com/ellisonleao/gruvbox.nvim) - классическая цветовая схема
-- [transparent.nvim](https://github.com/xiyaowong/transparent.nvim) - прозрачный фон для интеграции с окружением
-- [startup.nvim](https://github.com/max397574/startup.nvim) - стартовая страница
-
-### Файлы и навигация
-
-- [oil](https://github.com/stevearc/oil.nvim) - файловый менеджер, позволяющий редактировать файловую систему как обычный буфер
-- [oil-git](https://github.com/benomahony/oil-git.nvim) - отображение Git-статуса в Oil
-- [oil-lsp-diagnostic](https://github.com/JezerM/oil-lsp-diagnostics.nvim) - диагностика ошибок для файлов в Oil
-- [telescope](https://github.com/nvim-telescope/telescope.nvim) - мощная система поиска
-- [noice](https://github.com/folke/noice.nvim) - улучшенная система уведомлений
-
-### Форматирование и анализ кода
-
-- [conform](https://github.com/stevearc/conform.nvim) - автоматическое форматирование при сохранении
-- [mason](https://github.com/mason-org/mason.nvim) - менеджер для установки LSP, DAP, линтеров и форматеров
-- [treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - улучшенная подсветка синтаксиса
-
-### Интерфейс
-
-- [lualine](https://github.com/nvim-lualine/lualine.nvim) - информативная строка состояния
 
 ## Работа с LSP
 
@@ -131,5 +86,3 @@ vim.lsp.enable('luals')
 ```
 
 (Опционально) Настройте сочетания клавиш и автокоманды для использования возможностей LSP. lsp-attach
-
-
