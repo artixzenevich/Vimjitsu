@@ -3,7 +3,7 @@ vim.lsp.enable({
     "emmet-language-server",
     "intelephense",
     "tailwindcss",
-    "html-ls",
+    --"html-ls",
     "css-ls",
     "ts-ls",
 })
